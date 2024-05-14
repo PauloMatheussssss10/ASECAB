@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doação App</title>
+</head>
+<body>
+    <h1>Cadastro</h1>
+    <form action="/cadastro" method="post">
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome"><br>
+        <label for="endereco">Endereço:</label><br>
+        <input type="text" id="endereco" name="endereco"><br>
+        <label for="telefone">Telefone:</label><br>
+        <input type="text" id="telefone" name="telefone"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for="login">Login:</label><br>
+        <input type="text" id="login" name="login"><br>
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha" name="senha"><br>
+        <input type="submit" value="Cadastrar">
+    </form>
+
+    <h1>Login</h1>
+    <form action="/login" method="post">
+        <label for="login">Login:</label><br>
+        <input type="text" id="login" name="login"><br>
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha" name="senha"><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <h1>Fazer Doação</h1>
+    <button onclick="escanearQR()">Escanear QR Code</button>
+    <script>
+        function escanearQR() {
+            // Aqui você pode implementar a lógica para escanear o QR code
+            // e enviar a confirmação da doação para o backend.
+            var confirmacao = prompt("Confirma a doação? (sim/não)");
+            if (confirmacao.toLowerCase() === "sim") {
+                alert("Doação confirmada. Imprima seu comprovante de doação.");
+            } else {
+                alert("Doação não confirmada. Operação finalizada.");
+            }
+        }
+    </script>
+</body>
+</html>
